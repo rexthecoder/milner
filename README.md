@@ -89,7 +89,7 @@ retrieval hit rate.
 
 **Reproducibility**: one YAML per experiment, seeds passed to every adapter, temperature 0
 by default, the resolved config copied next to the logs, and a deterministic CRC32-based
-default embedder. See the [docs](https://rexfordasamoah.github.io/milner/) for what is and
+default embedder. See the [docs](https://rexthecoder.github.io/milner/) for what is and
 is not guaranteed for hosted APIs.
 
 ## Extending

@@ -2,7 +2,7 @@
 
 ```bash
 pip install "milner[plots]"
-git clone https://github.com/rexfordasamoah/milner && cd milner
+git clone https://github.com/rexthecoder/milner && cd milner
 milner run examples/toy.yaml
 ```
 

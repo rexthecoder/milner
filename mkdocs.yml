@@ -1,6 +1,6 @@
 site_name: milner
 site_description: A benchmark harness for comparing memory strategies in LLM agents.
-repo_url: https://github.com/rexfordasamoah/milner
+repo_url: https://github.com/rexthecoder/milner
 theme:
   name: material
 nav:

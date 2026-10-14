@@ -3,7 +3,7 @@
 Bug reports, new memory strategies, model adapters and dataset converters are welcome.
 
 ```bash
-git clone https://github.com/rexfordasamoah/milner && cd milner
+git clone https://github.com/rexthecoder/milner && cd milner
 pip install -e ".[dev]"
 pytest
 ruff check .
