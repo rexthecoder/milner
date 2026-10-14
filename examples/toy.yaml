@@ -1,0 +1,18 @@
+# Compare all four memory strategies on the bundled toy benchmark.
+# Runs offline with the deterministic mock model: no GPU, no API key.
+name: toy
+seed: 0
+dataset: toy.jsonl
+output_dir: ../runs
+
+model:
+  type: mock
+
+memories:
+  - type: none
+  - type: full
+  - type: retrieval
+    top_k: 3
+  - type: summary
+    chunk_size: 10
+    max_summary_words: 60

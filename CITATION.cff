@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "milner: a benchmark harness for memory strategies in LLM agents"
+version: 0.1.0
+license: MIT
+authors:
+  - family-names: Asamoah
+    given-names: Rexford
+repository-code: "https://github.com/rexfordasamoah/milner"

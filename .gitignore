@@ -1,0 +1,11 @@
+__pycache__/
+*.egg-info/
+.venv/
+build/
+dist/
+site/
+.pytest_cache/
+.ruff_cache/
+runs/
+paper.pdf
+paper.jats

@@ -1,0 +1,24 @@
+# Same experiment against a local OpenAI-compatible server (vLLM, llama.cpp, Ollama).
+#   vllm serve Qwen/Qwen2.5-1.5B-Instruct
+# Switch `model` to `type: openai` with no base_url (and OPENAI_API_KEY set) for the hosted API,
+# or to `type: anthropic` / `type: hf` for the other adapters.
+name: toy-local-llm
+seed: 0
+dataset: toy.jsonl
+output_dir: ../runs
+
+model:
+  type: openai
+  model: Qwen/Qwen2.5-1.5B-Instruct
+  base_url: http://localhost:8000/v1
+  temperature: 0.0
+
+memories:
+  - type: none
+  - type: full
+  - type: retrieval
+    top_k: 3
+    embedder:
+      type: sentence-transformers
+  - type: summary
+    chunk_size: 10

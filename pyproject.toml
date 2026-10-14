@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "milner"
+version = "0.1.0"
+description = "A benchmark harness for comparing memory strategies in LLM agents."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "Rexford Asamoah" }]
+keywords = ["llm", "agents", "memory", "benchmark", "evaluation", "reproducibility"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["pyyaml>=6"]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.5"]
+openai = ["openai>=1.0"]
+anthropic = ["anthropic>=0.30"]
+hf = ["transformers>=4.40", "torch"]
+embeddings = ["sentence-transformers>=2.2"]
+dev = ["pytest>=7", "ruff>=0.4", "matplotlib>=3.5"]
+docs = ["mkdocs>=1.5", "mkdocs-material>=9"]
+
+[project.scripts]
+milner = "milner.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["UP006", "UP007", "UP035", "UP045"]
